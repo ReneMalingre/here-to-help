@@ -1,45 +1,50 @@
 import React from 'react';
-import '../index.css';
+import { Box, Flex, Spacer, Text } from '@chakra-ui/react';
 import NavElement from './navigation/NavElement';
 
-function Header({ current, setCurrent }) {
-
-  const handleClick = id => {
-    setCurrent(id);
-  };
-
+function Header({ current, handlePageChange }) {
   return (
-    <div className="header">
-      <NavElement
-        id="about"
-        title="About Me"
-        link="/"
-        current={current === 'about'}
-        onClick={handleClick}
-      />
-      <NavElement
-        id="portfolio"
-        title="Portfolio"
-        link="/"
-        current={current === 'portfolio'}
-        onClick={handleClick}
-      />
-
-      <NavElement
-        id="contact"
-        title="Contact"
-        link="/"
-        current={current === 'contact'}
-        onClick={handleClick}
-      />
-      <NavElement
-        id="resume"
-        title="Resumé"
-        link="/"
-        current={current === 'resume'}
-        onClick={handleClick}
-      />
-    </div>
+    <Flex as="nav" px={2} py={4} mb={4} bg="turquoise.500" color="white">
+      <Box>
+        <Text fontSize="2xl" fontWeight="bold">
+          Logo
+        </Text>
+      </Box>
+      <Spacer />
+      <Box display="flex">
+        <NavElement
+          id="about"
+          title="About Me"
+          link="/"
+          isSelected={current === 'about'}
+          onClick={() => handlePageChange('about')}
+        />
+        <Box px={4} />
+        <NavElement
+          id="portfolio"
+          title="Portfolio"
+          link="/"
+          isSelected={current === 'portfolio'}
+          onClick={() => handlePageChange('portfolio')}
+        />
+        <Box px={4} />
+        <NavElement
+          id="contact"
+          title="Contact"
+          link="/"
+          isSelected={current === 'contact'}
+          onClick={() => handlePageChange('contact')}
+        />
+        <Box px={4} />
+        <NavElement
+          id="resume"
+          title="Resumé"
+          link="/"
+          isSelected={current === 'resume'}
+          onClick={() => handlePageChange('resume')}
+        />
+      </Box>
+    </Flex>
   );
 }
 

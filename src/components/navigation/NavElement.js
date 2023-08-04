@@ -1,8 +1,7 @@
 import React from 'react';
-import '../../index.css';
 import { Link } from '@chakra-ui/react';
 
-function NavElement({id, title, link, current, onClick }) {
+function NavElement({id, title, link, isSelected, onClick }) {
   return (
     <Link
       px={2}
@@ -14,8 +13,8 @@ function NavElement({id, title, link, current, onClick }) {
         color: 'white',
       }}
       link={link}
-      bg={current ? 'blue.500' : ''}
-      color={current ? 'white' : ''}
+      bg={isSelected ? 'blue.500' : ''}
+      color={isSelected ? 'white' : ''}
       onClick={(event) => {
         event.preventDefault();
         onClick(id);

@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../index.css';
 import { useForm } from 'react-hook-form';
 import {
   Box,
@@ -8,18 +7,23 @@ import {
   FormLabel,
   FormErrorMessage,
   Input,
+  Text,
   Textarea,
+  useMediaQuery,
   useToast,
 } from '@chakra-ui/react';
 
 const ContactForm = () => {
+  const [isNotSmallScreen] = useMediaQuery('(min-width: 600px)');
+
   const {
     handleSubmit,
     register,
     reset,
     formState: { errors },
     trigger,
-  } = useForm({mode: 'onChange'});
+  } = useForm({ mode: 'onChange' });
+
   // Chakra UI's toast component for showing success/error messages
   const toast = useToast();
 
@@ -30,12 +34,31 @@ const ContactForm = () => {
     // validation, if any of the fields are empty, show an error toast message
     // although useForm should prevent this from happening
     if (!name || !email || !message) {
+      let status = 'error';
+      let bgColor = status === 'error' ? 'red.500' : 'periwinkle.500';
+      let textColor = 'oxfordBlue.500';
+      let title = 'Form Submission Error';
+      let description =
+        'Please correct the errors in the form before submitting.';
       toast({
-        title: "Form Submission Error",
-        description: "Please correct the errors in the form before submitting.",
-        status: "error",
+        title,
+        description,
+        status,
         duration: 5000,
         isClosable: true,
+        position: 'top',
+        render: () => (
+          <Box
+            color={textColor}
+            p={3}
+            bg={bgColor}
+            borderRadius="lg"
+            boxShadow="dark-lg"
+          >
+            <Text fontWeight="bold">{title}</Text>
+            <Text>{description}</Text>
+          </Box>
+        ),
       });
       return;
     }
@@ -46,22 +69,48 @@ const ContactForm = () => {
     window.open(mailtoLink);
     console.log(values);
     // Show a success toast message via Chakra UI's useToast component
+    let status = 'success';
+    let bgColor = status === 'error' ? 'red.500' : 'periwinkle.500';
+    let textColor = 'oxfordBlue.500';
+    let title = 'Form submitted';
+    let description = 'Your contact form has been successfully submitted';
+
     toast({
-      title: 'Form submitted',
-      description: 'Your contact form has been successfully submitted',
-      status: 'success',
+      title,
+      description,
+      status,
       duration: 5000,
       isClosable: true,
+      position: 'top',
+      render: () => (
+        <Box
+          color={textColor}
+          p={3}
+          bg={bgColor}
+          borderRadius="lg"
+          boxShadow="dark-lg"
+        >
+          <Text fontWeight="bold">{title}</Text>
+          <Text>{description}</Text>
+        </Box>
+      ),
     });
-    // Reset the contact form after submission
     reset();
   };
 
   return (
-    <Box as="form" onSubmit={handleSubmit(onSubmit)}>
+    <Box
+      as="form"
+      onSubmit={handleSubmit(onSubmit)}
+      w="100%"
+      px={isNotSmallScreen ? 7 : 0}
+    >
       <FormControl id="name" isInvalid={errors.name}>
-        <FormLabel>Name</FormLabel>
+        <FormLabel>Your Name:</FormLabel>
         <Input
+          w={isNotSmallScreen ? '50%' : '100%'}
+          backgroundColor="coolGray.500"
+          color="oxfordBlue.500"
           type="text"
           {...register('name', { required: 'Please enter your name' })}
           // onBlur is used to trigger validation on loss of focus
@@ -72,8 +121,11 @@ const ContactForm = () => {
         </FormErrorMessage>
       </FormControl>
       <FormControl id="email" isInvalid={errors.email} mt={4}>
-        <FormLabel>Email</FormLabel>
+        <FormLabel>Your Email:</FormLabel>
         <Input
+          w={isNotSmallScreen ? '50%' : '100%'}
+          backgroundColor="coolGray.500"
+          color="oxfordBlue.500"
           type="email"
           {...register('email', {
             required: 'Please enter your email',
@@ -89,8 +141,11 @@ const ContactForm = () => {
         </FormErrorMessage>
       </FormControl>
       <FormControl id="message" isInvalid={errors.message} mt={4}>
-        <FormLabel>Message</FormLabel>
+        <FormLabel>Message:</FormLabel>
         <Textarea
+          w={isNotSmallScreen ? '75%' : '100%'}
+          backgroundColor="coolGray.500"
+          color="oxfordBlue.500"
           {...register('message', { required: 'Please enter a message' })}
           onBlur={() => trigger('message')}
         />
@@ -101,8 +156,10 @@ const ContactForm = () => {
       <Button
         isLoading={errors.isSubmitting}
         type="submit"
-        colorScheme="blue"
-        mt={4}
+        backgroundColor="turquoise.500"
+        color="oxfordBlue.500"
+        mt={6}
+        _hover={{ backgroundColor: 'turquoise.600' }}
       >
         Submit
       </Button>
