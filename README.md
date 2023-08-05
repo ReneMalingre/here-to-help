@@ -1,68 +1,100 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# René Malingré's Portfolio - Here to Help
 
-## Available Scripts
+ [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-In the project directory, you can run:
+This Project is a portfolio written using React.js for an aspiring full-stack web developer. It showcases the developer's recent projects in order to communicate his skills to employers and clients looking to hire. It also provides a way for them to get in touch with the developer.
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Features](#features)
+- [Installation and Usage](#installation-and-usage)
+- [Technologies Used](#technologies-used)
+- [Screenshots](#screenshots)
+- [Live URL and Repository](#live-url-and-repository)
+- [Credits](#credits)
+- [Contributing](#contributing)
+- [License](#license)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Features
 
-### `npm test`
+ The application is written using React and formatted with Chakra-ui styles and components, and a custom colour palette. It is deployed to GitHub Pages. It is a single page application, and was written with a mobile-first, responsive design.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+It uses the Atkinson Hyperlegible font, which was designed to increase legibility for readers with low vision. It is free to use and can be downloaded from the [Braille Institute](https://www.brailleinstitute.org/freefont). The motivation for this choice was that the author of the portfolio is an optometrist and is passionate about accessibility.
 
-### `npm run build`
+The application has the following features:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- A navigation bar with links to the different pages of the site.
+- The landing page is the 'About Me' page, which contains a short bio and a photo of the developer.
+- The 'Portfolio' page contains a list of recent projects that the developer has worked on, with links to the deployed applications and the GitHub repositories.
+- The 'Contact' page contains a contact form, which can be used to send a message to the developer, and it has other contact details.
+- The 'Résumé' page contains the developer's résumé, and a link to a version which can be downloaded as a PDF file.
+- The footer contains links to the developer's GitHub, Twitter and LinkedIn profiles.
+- It is a Progressive Web Application (PWA) and it can be installed, and it has a service worker which caches the application for offline use.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Installation and Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Clone the repository to your local machine. Open the terminal in the root directory of the application.
 
-### `npm run eject`
+Run the following terminal commands to install the dependencies and start the application:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+run npm install && npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The application will open in your default browser at the following URL: [http://localhost:3000](http://localhost:3000)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Technologies Used
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- React
+  - Create React App
+  - React Dom
+  - React Hooks
+  - React icons
+- Chakra-ui Components
+- gh-pages
+- Atkinson Hyperlegible font
+- Node.js
 
-## Learn More
+## Screenshots
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Desktop Browser - Showing the About Me Page
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Screenshot of the application on a desktop browser, showing the About Me page](./docs/images/screenshots/about.png)
 
-### Code Splitting
+### Desktop Browser - Showing the Portfolio Page
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+![Screenshot of the application on a desktop screen, showing the Portfolio page](./docs/images/screenshots/portfolio.png)
 
-### Analyzing the Bundle Size
+### Mobile Browser - Contact Page and Résumé Page
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+![Screenshot of the application on a mobile browser, showing the Contact page](./docs/images/screenshots/contact.png)![Screenshot of the application on a mobile browser, showing the résumé page](./docs/images/screenshots/resume.png)
 
-### Making a Progressive Web App
+## Live URL and Repository
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+The live application can be accessed at the following URL: [Rene Malingre Portfolio](https://renemalingre.github.io/here-to-help/)
 
-### Advanced Configuration
+The repository can be accessed at the following URL: [Rene Malingre Portfolio GitHub repository](https://github.com/ReneMalingre/here-to-help)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## Credits
 
-### Deployment
+The following resources were used in the development of this application:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+- [Create React App](https://create-react-app.dev/) - for bootstrapping the application
+- [React](https://reactjs.org/) - a JavaScript library for building user interfaces
+- [Chakra-ui](https://chakra-ui.com/) - a React component library
+- [gh-pages](https://www.npmjs.com/package/gh-pages) - for deployment to GitHub Pages
+- [Atkinson Hyperlegible font](https://www.brailleinstitute.org/freefont) - a font designed to increase legibility for readers with low vision
+- [Node.js](https://nodejs.org/en/) - for running JavaScript outside of the browser
+- [Visual Studio Code](https://code.visualstudio.com/) - the code editor used for writing the application
+- [ChatGPT](https://chat.openai.com/) - for help with learning Chakra-ui components
+- [Brittany Chiang](https://brittanychiang.com/) - inspired the colour palette of the application
 
-### `npm run build` fails to minify
+## Contributing
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Contributions to this project will not be accepted, as this project is an assessment piece for a coding course, and it must be the project author's own work. However, feel free to fork the repository and make your own changes.
+
+## License
+
+This project is licensed under the terms of the MIT license.
+
+© 2023 René Malingré
