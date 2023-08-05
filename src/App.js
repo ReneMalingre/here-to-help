@@ -39,7 +39,6 @@ function App() {
   const [current, setCurrent] = useState('about');
 
   const handlePageChange = page => {
-    console.log('handlePageChange', page);
     setCurrent(page);
   };
 

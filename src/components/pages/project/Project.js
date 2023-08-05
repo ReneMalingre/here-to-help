@@ -8,13 +8,14 @@ import {
   useMediaQuery,
   Icon,
   Flex,
+  AspectRatio,
 } from '@chakra-ui/react';
 import { FaGithub } from 'react-icons/fa';
 import Badge from '../../badge/Badge';
 
 // sub-component of Portfolio.js
-const ProjectImage = ({ screenshot, githubLink }) => {
-  const [isNotSmallScreen] = useMediaQuery('(min-width: 600px)');
+const ProjectImage = ({ screenshot, aspectRatio, githubLink }) => {
+  const [isNotSmallScreen] = useMediaQuery('(min-width: 800px)');
 
   return (
     <Box
@@ -22,7 +23,9 @@ const ProjectImage = ({ screenshot, githubLink }) => {
       position="relative"
       mb={!isNotSmallScreen && '1rem'}
       mx={isNotSmallScreen ? '1rem' : '0rem'}
+      mt={isNotSmallScreen ? '2.5rem' : '1rem'}
     >
+      <AspectRatio ratio={aspectRatio} borderRadius="md" shadow="xl">
       <Image
         src={screenshot}
         alt="screenshot"
@@ -30,6 +33,7 @@ const ProjectImage = ({ screenshot, githubLink }) => {
         borderRadius="md"
         shadow="xl"
       />
+      </AspectRatio>
       {githubLink ? (
         <Link href={githubLink} isExternal>
           <Icon
@@ -55,12 +59,13 @@ const Project = ({
   description,
   technology,
   link,
+  aspectRatio,
   screenshot,
   githubLink,
   markerComment,
   flip,
 }) => {
-  const [isNotSmallScreen] = useMediaQuery('(min-width: 600px)');
+  const [isNotSmallScreen] = useMediaQuery('(min-width: 800px)');
 
   const info = (
     <VStack align="start" spacing={3} flex={isNotSmallScreen ? 2 : 1}>
@@ -108,7 +113,7 @@ const Project = ({
   );
 
   const image = (
-    <ProjectImage screenshot={screenshot} githubLink={githubLink} />
+    <ProjectImage screenshot={screenshot} aspectRatio={aspectRatio} githubLink={githubLink} />
   );
 
   return (

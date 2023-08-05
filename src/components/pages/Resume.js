@@ -43,7 +43,7 @@ function Resume() {
             Contact Details
           </Heading>
           <VStack align="start" spacing={0} ml={5}>
-            <Box>PO Box 216, Fullarton SA 5063, Australia</Box>
+            <Box>M: PO Box 216, Fullarton SA 5063, Australia</Box>
             <Box>
               T:{' '}
               <Link href="tel:0422895267" isExternal>

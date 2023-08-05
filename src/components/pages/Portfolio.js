@@ -30,6 +30,7 @@ function Portfolio() {
                 link={project.link}
                 githubLink={project.githubLink}
                 screenshot={project.screenshot}
+                aspectRatio={project.aspectRatio}
                 markerComment={project.markerComment}
                 flip={index % 2 !== 0}
               />

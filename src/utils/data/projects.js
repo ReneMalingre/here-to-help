@@ -30,6 +30,7 @@ const projectData = [
     githubLink: 'https://github.com/NatalieCampbellGit/InfoPulse',
     screenshot: infopulseImage,
     markerComment: `100% - well done on this project. Your group's project was fantastic`,
+    aspectRatio: 1.71,
   },
   {
     title: 'Tech Chronicles',
@@ -40,6 +41,7 @@ const projectData = [
     githubLink: 'https://github.com/ReneMalingre/tech-chronicles',
     screenshot: techChroniclesImage,
     markerComment: `100% - outstanding and deserves the highest praise. Your dedication, proficiency, and attention to detail are evident throughout the entire project`,
+    aspectRatio: 1.278,
   },
   {
     title: 'City Weather Hub',
@@ -52,6 +54,7 @@ const projectData = [
     screenshot: weatherDashboardImage,
     markerComment:
       '100% - Amazing job on this homework assignment! This is by far the most impressive submission I have seen for this module',
+    aspectRatio: 2.077,
   },
   {
     title: 'InkFlow',
@@ -71,6 +74,7 @@ const projectData = [
     githubLink: 'https://github.com/ReneMalingre/inkflow',
     screenshot: inkflowImage,
     markerComment: `100% - Congratulations on an outstanding homework assignment and great job addressing previous grader's comment`,
+    aspectRatio: 1.613,
   },
   {
     title: 'Whiskers of Zen',
@@ -91,6 +95,7 @@ const projectData = [
     screenshot: whiskersImage,
     markerComment:
       '97.5% - Really awesome work on this project! A great unique idea with so many features that went above and beyond what was required, exceptional work.',
+    aspectRatio: 1.358,
   },
   {
     title: 'AEC Books',
@@ -110,6 +115,7 @@ const projectData = [
     githubLink: '',
     screenshot: xeroIntegrationImage,
     markerComment: '',
+    aspectRatio: 1.678,
   },
 ];
 

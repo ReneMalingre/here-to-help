@@ -64,10 +64,12 @@ const ContactForm = () => {
     }
 
     // Create a mailto link with the values from the contact form
-    const mailtoLink = `mailto:support@yourwebsite.com?subject=Contact Form Submission From ${name}&body=Email: ${email}%0D%0A Message: ${message}`;
+    const mailtoLink = `mailto:rene.malingre@gmail.com?subject=${encodeURIComponent(
+      'Contact Form Submission From ' + name
+    )}&body=${encodeURIComponent(`Sender Name: ${name}\nSender Email: ${email}\nMessage: ${message}`)}`;
     // Open the mailto link in a new window
     window.open(mailtoLink);
-    console.log(values);
+
     // Show a success toast message via Chakra UI's useToast component
     let status = 'success';
     let bgColor = status === 'error' ? 'red.500' : 'periwinkle.500';
