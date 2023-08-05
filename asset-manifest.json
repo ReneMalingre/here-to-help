@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/here-to-help/static/js/main.e4065f2b.js",
+    "static/js/787.940c13eb.chunk.js": "/here-to-help/static/js/787.940c13eb.chunk.js",
+    "static/media/whiskers-of-zen.png": "/here-to-help/static/media/whiskers-of-zen.6911e5530a6348cba5ea.png",
+    "static/media/xero-integration.png": "/here-to-help/static/media/xero-integration.ac1f3dc0d4bb17963649.png",
+    "static/media/headshot.jpg": "/here-to-help/static/media/headshot.983d03ea7895a0daa301.jpg",
+    "static/media/admin-dashboard.png": "/here-to-help/static/media/admin-dashboard.62d08c17bc03f0f07db6.png",
+    "static/media/weather-hub.png": "/here-to-help/static/media/weather-hub.a499ae4172d6a4c24cc6.png",
+    "static/media/tech-chronicles.png": "/here-to-help/static/media/tech-chronicles.6eeb40d31782e4571440.png",
+    "static/media/inkflow.png": "/here-to-help/static/media/inkflow.2f8a7bd8022bfe386e06.png",
+    "static/media/rm-logo.svg": "/here-to-help/static/media/rm-logo.adbc0bc56d7f21f59dc8c55b24f5566b.svg",
+    "index.html": "/here-to-help/index.html",
+    "main.e4065f2b.js.map": "/here-to-help/static/js/main.e4065f2b.js.map",
+    "787.940c13eb.chunk.js.map": "/here-to-help/static/js/787.940c13eb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.e4065f2b.js"
+  ]
+}
