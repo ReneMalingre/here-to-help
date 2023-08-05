@@ -6,9 +6,11 @@ import {
   Text,
   Heading,
   useMediaQuery,
+  IconButton,
+  Link,
 } from '@chakra-ui/react';
-
-const AboutMe = ({ name, imageUrl, aboutText }) => {
+import { FaLocationArrow } from 'react-icons/fa';
+const AboutMe = ({ name, imageUrl, aboutText, tagLine }) => {
   const [isNotSmallScreen] = useMediaQuery('(min-width: 600px)');
 
   return (
@@ -39,10 +41,31 @@ const AboutMe = ({ name, imageUrl, aboutText }) => {
       </Box>
       <VStack flex="2" align={isNotSmallScreen ? 'start' : 'center'}>
         <Heading size="lg">About Me</Heading>
-
+        <Text
+          fontSize="xl"
+          fontWeight="bold"
+          textAlign="center"
+          textColor="turquoise.500"
+        >
+          {tagLine}
+        </Text>
         {aboutText.map((paragraph, index) => (
           <Text key={index}>{paragraph}</Text>
         ))}
+        <Link
+          href="https://www.google.com/maps/place/Adelaide+SA,+Australia"
+          isExternal
+          mx={5}
+        >
+          <IconButton
+            aria-label="Github Profile"
+            icon={<FaLocationArrow fontSize="1.25rem" />}
+            size="md"
+            color="turquoise.500"
+            variant="ghost"
+            _hover={{ color: 'oxfordBlue.500', bg: 'turquoise.500' }}
+          />Adelaide, South Australia
+        </Link>
       </VStack>
     </Box>
   );

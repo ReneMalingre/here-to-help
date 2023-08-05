@@ -1,17 +1,49 @@
 import React from 'react';
-import { Box, Flex, Spacer, Text } from '@chakra-ui/react';
+import {
+  Flex,
+  Spacer,
+  useBreakpointValue,
+  Grid,
+  Text,
+  Divider,
+} from '@chakra-ui/react';
 import NavElement from './navigation/NavElement';
+import Logo from './navigation/Logo';
 
 function Header({ current, handlePageChange }) {
+  const direction = useBreakpointValue({ base: 'column', md: 'row' });
+  const gridTemplateColumns = useBreakpointValue({
+    base: 'repeat(2, 1fr)',
+    md: 'repeat(4, 1fr)',
+  });
+  const logoSize = useBreakpointValue({ base: '40px', md: '50px' });
+  const logoMargin = useBreakpointValue({ base: '1rem', md: '0px' });
+
   return (
-    <Flex as="nav" px={2} py={4} mb={4} bg="turquoise.500" color="white">
-      <Box>
-        <Text fontSize="2xl" fontWeight="bold">
-          Logo
+    <Flex
+      as="nav"
+      px={2}
+      py={4}
+      mb={4}
+      bg="turquoise.500"
+      color="white"
+      flexDirection={direction}
+      alignItems="center"
+    >
+      <Flex alignItems="center">
+        <Logo width={logoSize} />
+        <Text fontSize="2xl" color="oxfordBlue.500" ml={4}>
+          René Malingré
         </Text>
-      </Box>
-      <Spacer />
-      <Box display="flex">
+      </Flex>
+      <Spacer mb={logoMargin} />
+      {direction === 'column' ? (
+        <Divider mb="1rem" borderColor="oxfordBlue.500" />
+      ) : (
+        ''
+      )}
+
+      <Grid templateColumns={gridTemplateColumns} gap={2}>
         <NavElement
           id="about"
           title="About Me"
@@ -19,7 +51,6 @@ function Header({ current, handlePageChange }) {
           isSelected={current === 'about'}
           onClick={() => handlePageChange('about')}
         />
-        <Box px={4} />
         <NavElement
           id="portfolio"
           title="Portfolio"
@@ -27,7 +58,6 @@ function Header({ current, handlePageChange }) {
           isSelected={current === 'portfolio'}
           onClick={() => handlePageChange('portfolio')}
         />
-        <Box px={4} />
         <NavElement
           id="contact"
           title="Contact"
@@ -35,15 +65,14 @@ function Header({ current, handlePageChange }) {
           isSelected={current === 'contact'}
           onClick={() => handlePageChange('contact')}
         />
-        <Box px={4} />
         <NavElement
           id="resume"
-          title="Resumé"
+          title="Résumé"
           link="/"
           isSelected={current === 'resume'}
           onClick={() => handlePageChange('resume')}
         />
-      </Box>
+      </Grid>
     </Flex>
   );
 }

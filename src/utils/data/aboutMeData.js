@@ -13,6 +13,7 @@ a point of sale system, a clinical records system, and integrations between my p
 `In the past I have developed a staff rostering system which was adopted by an optometry company with over 200 branches around Australia and New Zealand.`,
 `My goal is to leverage this blend of extensive experience and freshly acquired full-stack web development skills to create streamlined, efficient digital solutions. 
 I am currently open to part-time roles and internships in the web development space, eager to contribute to meaningful projects that drive business value.`],
+  tagLine: `I'm here to help.`,
 };
 
 export default aboutMe;
