@@ -9,6 +9,7 @@ import {
   List,
   ListItem,
   Flex,
+  Button,
 } from '@chakra-ui/react';
 import Badge from '../badge/Badge';
 import technologies from '../../utils/data/resume';
@@ -143,8 +144,8 @@ function Resume() {
               University of Technology (1986 - 1990)
             </Heading>
             <Text px={5}>
-              Graduated with First Class Honours in 1990. I was awarded a University Medal
-              for Academic Excellence.
+              Graduated with First Class Honours in 1990. I was awarded a
+              University Medal for Academic Excellence.
             </Text>
           </VStack>
           <Heading as="h2" size="md">
@@ -162,9 +163,9 @@ function Resume() {
               10 retail staff.
             </ListItem>
             <ListItem>
-              Optometry: 30 years of experience. Expertise in fitting rigid and scleral contact lenses,
-              myopia management, and managing patients with complicated
-              spectacle prescriptions.
+              Optometry: 30 years of experience. Expertise in fitting rigid and
+              scleral contact lenses, myopia management, and managing patients
+              with complicated spectacle prescriptions.
             </ListItem>
           </List>
           <Heading as="h2" size="md">
@@ -179,6 +180,23 @@ function Resume() {
           <Text px={5}>Available upon request</Text>
         </VStack>
       </Box>
+      <Flex justifyContent="center" alignItems="center" mx="auto" my={2}>
+        <a
+          href={process.env.PUBLIC_URL + '/René Malingré - resume.pdf'}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button
+            type="button"
+            backgroundColor="turquoise.500"
+            color="oxfordBlue.500"
+            mt={2}
+            _hover={{ backgroundColor: 'turquoise.600' }}
+          >
+            Download Resume
+          </Button>
+        </a>
+      </Flex>
     </VStack>
   );
 }
