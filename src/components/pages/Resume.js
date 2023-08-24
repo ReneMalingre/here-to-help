@@ -23,10 +23,10 @@ function Resume() {
           Résumé
         </Heading>
         <VStack align="start" spacing={3}>
-          <Heading as="h2" size="md" color="turquoise.500">
+          <Heading as="h2" size="md" color="deepCyan.500">
             Rene Malingre
           </Heading>
-          <Heading as="h3" size="md" color="turquoise.500" fontStyle="italic">
+          <Heading as="h3" size="md" color="deepCyan.500" fontStyle="italic">
             Full-Stack Web Developer
           </Heading>
           <Flex wrap="wrap" px={isNotSmallScreen ? 12 : 5}>
@@ -34,8 +34,8 @@ function Resume() {
               <Badge
                 key={index}
                 title={tech}
-                bgColour="coolGray.500"
-                textColour="oxfordBlue.500"
+                bgColour="mutedCyan.500"
+                textColour="spaceGray.500"
               />
             ))}
           </Flex>
@@ -188,10 +188,10 @@ function Resume() {
         >
           <Button
             type="button"
-            backgroundColor="turquoise.500"
-            color="oxfordBlue.500"
+            backgroundColor="deepCyan.500"
+            color="spaceGray.500"
             mt={2}
-            _hover={{ backgroundColor: 'turquoise.600' }}
+            _hover={{ backgroundColor: 'deepCyan.600' }}
           >
             Download Resume
           </Button>

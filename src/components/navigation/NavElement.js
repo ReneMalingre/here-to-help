@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from '@chakra-ui/react';
 
-function NavElement({id, title, link, isSelected, onClick }) {
+function NavElement({ id, title, link, isSelected, onClick }) {
   return (
     <Link
       px={2}
@@ -11,12 +11,12 @@ function NavElement({id, title, link, isSelected, onClick }) {
       textAlign="center"
       _hover={{
         textDecoration: 'none',
-        bg: 'oxfordBlue.500',
-        color: 'turquoise.500',
+        bg: 'spaceGray.500',
+        color: 'deepCyan.500',
       }}
       link={link}
-      bg={isSelected ? 'oxfordBlue.500' : ''}
-      color={isSelected ? 'turquoise.500' : 'oxfordBlue.500'}
+      bg={isSelected ? 'spaceGray.500' : ''}
+      color={isSelected ? 'deepCyan.500' : 'spaceGray.500'}
       onClick={event => {
         event.preventDefault();
         onClick(id);

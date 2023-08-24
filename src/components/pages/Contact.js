@@ -18,14 +18,14 @@ function Contact() {
         <Heading size="lg" mb={2}>
           Contact Me
         </Heading>
-        <Text mb={4} mx={2} color="turquoise.500">
+        <Text mb={4} mx={2} color="deepCyan.500">
           If you have any questions or would like to get in touch, please fill
           out the form below, or via my socials below.
         </Text>
         <ContactForm />
       </Box>
       <Box align="center" w="100%" mt={4}>
-        <Divider mb={4} borderColor="turquoise.500" />
+        <Divider mb={4} borderColor="deepCyan.500" />
         <VStack align="center" spacing={0} ml={5}>
           <Heading as="h2" size="md">
             Contact Details

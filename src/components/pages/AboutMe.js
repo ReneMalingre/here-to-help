@@ -45,7 +45,7 @@ const AboutMe = ({ name, imageUrl, aboutText, tagLine }) => {
           fontSize="xl"
           fontWeight="bold"
           textAlign="center"
-          textColor="turquoise.500"
+          textColor="deepCyan.500"
         >
           {tagLine}
         </Text>
@@ -61,10 +61,11 @@ const AboutMe = ({ name, imageUrl, aboutText, tagLine }) => {
             aria-label="Github Profile"
             icon={<FaLocationArrow fontSize="1.25rem" />}
             size="md"
-            color="turquoise.500"
+            color="deepCyan.500"
             variant="ghost"
-            _hover={{ color: 'oxfordBlue.500', bg: 'turquoise.500' }}
-          />Adelaide, South Australia
+            _hover={{ color: 'spaceGray.500', bg: 'deepCyan.500' }}
+          />
+          Adelaide, South Australia
         </Link>
       </VStack>
     </Box>

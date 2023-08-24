@@ -1,6 +1,13 @@
 import React from 'react';
 import Project from './project/Project';
-import { Box, useMediaQuery, VStack, Heading, Text, Divider } from '@chakra-ui/react';
+import {
+  Box,
+  useMediaQuery,
+  VStack,
+  Heading,
+  Text,
+  Divider,
+} from '@chakra-ui/react';
 import projects from '../../utils/data/projects';
 
 function Portfolio() {
@@ -12,7 +19,7 @@ function Portfolio() {
         <Heading size="lg" mb={2}>
           My Portfolio
         </Heading>
-        <Text mb={4} mx={2} color="turquoise.500">
+        <Text mb={4} mx={2} color="deepCyan.500">
           Here are some of my recent projects. Most are assignments or projects
           for the University of Adelaide's Full-stack Coding Boot Camp, February
           to September 2023, and where true, the mark and some commentary from
@@ -34,7 +41,9 @@ function Portfolio() {
                 markerComment={project.markerComment}
                 flip={index % 2 !== 0}
               />
-              {index !== projects.length - 1 && <Divider my="8" borderColor="turquoise.500" />}
+              {index !== projects.length - 1 && (
+                <Divider my="8" borderColor="deepCyan.500" />
+              )}
             </div>
           ))}
         </Box>

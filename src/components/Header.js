@@ -25,20 +25,20 @@ function Header({ current, handlePageChange }) {
       px={2}
       py={4}
       mb={4}
-      bg="turquoise.500"
+      bg="deepCyan.500"
       color="white"
       flexDirection={direction}
       alignItems="center"
     >
       <Flex alignItems="center">
         <Logo width={logoSize} />
-        <Text fontSize="2xl" color="oxfordBlue.500" ml={4}>
+        <Text fontSize="2xl" color="headerFooterText.500" ml={4}>
           René Malingré
         </Text>
       </Flex>
       <Spacer mb={logoMargin} />
       {direction === 'column' ? (
-        <Divider mb="1rem" borderColor="oxfordBlue.500" />
+        <Divider mb="1rem" borderColor="headerFooterText.500" />
       ) : (
         ''
       )}

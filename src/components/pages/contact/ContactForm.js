@@ -35,8 +35,8 @@ const ContactForm = () => {
     // although useForm should prevent this from happening
     if (!name || !email || !message) {
       let status = 'error';
-      let bgColor = status === 'error' ? 'red.500' : 'periwinkle.500';
-      let textColor = 'oxfordBlue.500';
+      let bgColor = status === 'error' ? 'red.500' : 'lightGray.500';
+      let textColor = 'spaceGray.500';
       let title = 'Form Submission Error';
       let description =
         'Please correct the errors in the form before submitting.';
@@ -66,14 +66,16 @@ const ContactForm = () => {
     // Create a mailto link with the values from the contact form
     const mailtoLink = `mailto:rene.malingre@gmail.com?subject=${encodeURIComponent(
       'Contact Form Submission From ' + name
-    )}&body=${encodeURIComponent(`Sender Name: ${name}\nSender Email: ${email}\nMessage: ${message}`)}`;
+    )}&body=${encodeURIComponent(
+      `Sender Name: ${name}\nSender Email: ${email}\nMessage: ${message}`
+    )}`;
     // Open the mailto link in a new window
     window.open(mailtoLink);
 
     // Show a success toast message via Chakra UI's useToast component
     let status = 'success';
-    let bgColor = status === 'error' ? 'red.500' : 'periwinkle.500';
-    let textColor = 'oxfordBlue.500';
+    let bgColor = status === 'error' ? 'red.500' : 'lightGray.500';
+    let textColor = 'spaceGray.500';
     let title = 'Form submitted';
     let description = 'Your contact form has been successfully submitted';
 
@@ -111,8 +113,8 @@ const ContactForm = () => {
         <FormLabel>Your Name:</FormLabel>
         <Input
           w={isNotSmallScreen ? '50%' : '100%'}
-          backgroundColor="coolGray.500"
-          color="oxfordBlue.500"
+          backgroundColor="mutedCyan.500"
+          color="spaceGray.500"
           type="text"
           {...register('name', { required: 'Please enter your name' })}
           // onBlur is used to trigger validation on loss of focus
@@ -126,8 +128,8 @@ const ContactForm = () => {
         <FormLabel>Your Email:</FormLabel>
         <Input
           w={isNotSmallScreen ? '50%' : '100%'}
-          backgroundColor="coolGray.500"
-          color="oxfordBlue.500"
+          backgroundColor="mutedCyan.500"
+          color="spaceGray.500"
           type="email"
           {...register('email', {
             required: 'Please enter your email',
@@ -146,8 +148,8 @@ const ContactForm = () => {
         <FormLabel>Message:</FormLabel>
         <Textarea
           w={isNotSmallScreen ? '75%' : '100%'}
-          backgroundColor="coolGray.500"
-          color="oxfordBlue.500"
+          backgroundColor="mutedCyan.500"
+          color="spaceGray.500"
           {...register('message', { required: 'Please enter a message' })}
           onBlur={() => trigger('message')}
         />
@@ -158,10 +160,10 @@ const ContactForm = () => {
       <Button
         isLoading={errors.isSubmitting}
         type="submit"
-        backgroundColor="turquoise.500"
-        color="oxfordBlue.500"
+        backgroundColor="deepCyan.500"
+        color="spaceGray.500"
         mt={6}
-        _hover={{ backgroundColor: 'turquoise.600' }}
+        _hover={{ backgroundColor: 'deepCyan.600' }}
       >
         Submit
       </Button>

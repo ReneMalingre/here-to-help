@@ -26,25 +26,25 @@ const ProjectImage = ({ screenshot, aspectRatio, githubLink }) => {
       mt={isNotSmallScreen ? '2.5rem' : '1rem'}
     >
       <AspectRatio ratio={aspectRatio} borderRadius="md" shadow="xl">
-      <Image
-        src={screenshot}
-        alt="screenshot"
-        boxSize="100%"
-        borderRadius="md"
-        shadow="xl"
-      />
+        <Image
+          src={screenshot}
+          alt="screenshot"
+          boxSize="100%"
+          borderRadius="md"
+          shadow="xl"
+        />
       </AspectRatio>
       {githubLink ? (
         <Link href={githubLink} isExternal>
           <Icon
             as={FaGithub}
-            color="turquoise.500"
+            color="deepCyan.500"
             w={10}
             h={10}
             position="absolute"
             bottom="5"
             right="5"
-            _hover={{ color: 'turquoise.600' }}
+            _hover={{ color: 'deepCyan.600' }}
           />
         </Link>
       ) : (
@@ -74,7 +74,7 @@ const Project = ({
       </Text>
       <Text>{description}</Text>
       {markerComment ? (
-        <Text px={2} fontSize="sm" fontStyle="italic" textColor="turquoise.500">
+        <Text px={2} fontSize="sm" fontStyle="italic" textColor="deepCyan.500">
           Grade: {markerComment}
         </Text>
       ) : (
@@ -86,13 +86,13 @@ const Project = ({
           <Badge
             key={index}
             title={tech}
-            bgColour="coolGray.500"
-            textColour="oxfordBlue.500"
+            bgColour="mutedCyan.500"
+            textColour="spaceGray.500"
           />
         ))}
       </Flex>
       {link ? (
-        <Link href={link} color="turquoise.500" isExternal pl={2}>
+        <Link href={link} color="deepCyan.500" isExternal pl={2}>
           Visit Live Project
         </Link>
       ) : (
@@ -101,7 +101,7 @@ const Project = ({
         </Text>
       )}
       {githubLink ? (
-        <Link href={githubLink} color="turquoise.500" isExternal pl={2}>
+        <Link href={githubLink} color="deepCyan.500" isExternal pl={2}>
           Visit GitHub Repository
         </Link>
       ) : (
@@ -113,7 +113,11 @@ const Project = ({
   );
 
   const image = (
-    <ProjectImage screenshot={screenshot} aspectRatio={aspectRatio} githubLink={githubLink} />
+    <ProjectImage
+      screenshot={screenshot}
+      aspectRatio={aspectRatio}
+      githubLink={githubLink}
+    />
   );
 
   return (

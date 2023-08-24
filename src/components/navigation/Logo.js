@@ -4,7 +4,7 @@ import { Box, useColorModeValue } from '@chakra-ui/react';
 import { ReactComponent as LogoIcon } from '../../assets/images/rm-logo.svg';
 
 export const Logo = props => {
-  const color = useColorModeValue('oxfordBlue.500', 'oxfordBlue.500');
+  const color = useColorModeValue('spaceGray.500', 'spaceGray.500');
   return <Box as={LogoIcon} w={props.width} color={color} />;
 };
 
