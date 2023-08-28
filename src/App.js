@@ -48,8 +48,13 @@ const theme = extendTheme({
     spaceGray: { 500: '#2D313D', 900: '#181A20' },
     mutedCyan: { 500: '#7FA8A5' },
     lightGray: { 500: '#EBEBEB' },
-    deepCyan: { 500: '#2A6866', 600: '#204d4c' },
-    headerFooterText: { 500: '#F5F7FA' }, // Added for contrast against deepCyan
+    // deepCyan: { 500: '#2A6866', 600: '#204d4c' },
+    // headerFooterText: { 500: '#F5F7FA' }, // Added for contrast against deepCyan
+    deepCyan: { 500: '#50D0B8', 900: '#42b6a1' },
+    // mutedCyan: { 500: '#8892B0' },
+    // periwinkle: { 500: '#CCD6F6' },
+    // turquoise: { 500: '#50D0B8', 600: '#42b6a1' },
+    headerFooterText: { 500: '#CCD6F6' }, // Added for contrast against deepCyan
   },
 });
 

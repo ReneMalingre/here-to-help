@@ -4,8 +4,36 @@ import weatherDashboardImage from '../../assets/images/portfolio/weather-hub.png
 import inkflowImage from '../../assets/images/portfolio/inkflow.png';
 import whiskersImage from '../../assets/images/portfolio/whiskers-of-zen.png';
 import xeroIntegrationImage from '../../assets/images/portfolio/xero-integration.png';
-
+import perfectProfileImage from '../../assets/images/portfolio/profile-page.png';
 const projectData = [
+  {
+    title: 'Perfect Profile',
+    description: [
+      `Perfect Profile is a progressive web application (PWA) built for clients to verify and update their contact details, 
+      lifestyle details, and eye history information, and to communicate their reasons for booking in for a consultation.
+      With a user-friendly interface, Perfect Profile aims to enhance the eye care experience for clients by ensuring all
+      contact details and eye health information is up-to-date and accurate, allowing the optometrist to provide tailored 
+      eye health and optical solutions based on the information gathered.
+      It also aims to reduce the time spent in the waiting room and at the reception desk, as clients can complete the questionnaire
+      privately at home, and to reduce the amount of paper used in the practice, and speed the flow of the clients through the practice.
+      It is built on the MERN stack, and uses Chakra UI for the front-end, and uses Apollo Server/graphql for communication.`,
+    ],
+    technology: [
+      'MERN stack',
+      'React',
+      'Node.js',
+      'Express',
+      'MongoDB',
+      'chakra-ui',
+      'Apollo Server',
+      'GraphQL',
+    ],
+    link: 'https://perfect-profile-d5a81bac6e60.herokuapp.com/',
+    githubLink: 'https://github.com/ReneMalingre/perfect-profile',
+    screenshot: perfectProfileImage,
+    markerComment: `Yet to be marked`,
+    aspectRatio: 1.151,
+  },
   {
     title: 'InfoPulse',
     description: [
